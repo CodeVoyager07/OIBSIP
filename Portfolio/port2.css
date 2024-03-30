@@ -1,0 +1,261 @@
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(45deg, #d9e4ff 25%, transparent 25%, transparent 75%, #d9e4ff 75%, #d9e4ff), 
+                linear-gradient(-45deg, #d9e4ff 25%, transparent 25%, transparent 75%, #d9e4ff 75%, #d9e4ff);
+    background-size: 80px 80px;
+    animation: backgroundAnimation 20s linear infinite;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 80px 80px;
+    }
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+    position: relative; /* Add position relative to container */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+.profile-pic {
+    position: absolute; /* Set position to absolute */
+    top: -10px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+}
+
+.profile-pic img {
+    width: 130px; /* Adjust size as needed */
+    height: 150px; /* Adjust size as needed */
+    border-radius: 20%; /* Make the image round */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+/* Projects Section */
+#projects {
+    padding: 50px 0;
+}
+
+.project {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.project img {
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.project .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project:hover img {
+    transform: scale(1.1);
+}
+
+.project:hover .overlay {
+    opacity: 1;
+}
+
+.project h3 {
+    margin-bottom: 10px;
+}
+
+/* Skills Section */
+#skills {
+    padding: 50px 0;
+}
+
+.skill {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.skill img {
+    width: 100px;
+    height: 100px;
+    transition: transform 1s ease;
+}
+
+.skill h3 {
+    margin-top: 10px;
+}
+
+.skill:hover img {
+    transform: scale(1.1);
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px 0;
+}
+
+#contact-form {
+    max-width: 400px;
+    margin: auto;
+}
+
+label, input, textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+/* Contact Information Section */
+#contact-info {
+    background-color: #; /* Background color for the section */
+    padding: 60px 0;
+    text-align: center;/* Center align content */
+ 
+}
+
+#contact-info .container {
+    /* Container styles */
+}
+
+#contact-info h2 {
+    margin-bottom: 20px;
+    color: #333; /* Text color for the heading */
+}
+
+#contact-info p {
+    margin-bottom: 10px;
+    color: #666; /* Text color for the contact information */
+}
+
+#contact-info a {
+    color: #333; /* Link color */
+    text-decoration: none;
+}
+
+#contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Social Section */
+#social {
+    background-color: #add8e6; /* Light blue background */
+    padding: 50px 0;
+ 
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+}
+
+.social-links a {
+    margin: 0 10px;
+}
+
+.social-links img {
+    width: 40px;
+    height: 40px;
+}
+#resume-download {
+    background-color: #f9f9f9; /* Background color for the section */
+    padding: 50px 0;
+    text-align: center; /* Center align content */
+    background-image: url('paper-pattern.jpg'); /* Background image */
+}
+
+#resume-download .container {
+    opacity: 10; /* Initially hide the container */
+    transition: opacity 0.5s ease; /* Smooth transition effect */
+}
+
+#resume-download .container.show {
+    opacity: 10; /* Show the container when it has the 'show' class */
+}
+
+#resume-download h2 {
+    margin-bottom: 20px;
+    color: #333; /* Text color for the heading */
+}
+
+#resume-download p {
+    margin-bottom: 30px;
+    color: #666; /* Text color for the description */
+}
+
+#resume-download .btn {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#resume-download .btn:hover {
+    background-color: #555;
+}
+
+/* Fade In/Out Effect */
+#skills:hover + #resume-download {
+    opacity: 1; /* Fade in the resume section when hovering over the skills section */
+}
